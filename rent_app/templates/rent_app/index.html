@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% if properties %}
+    <h1><font color=#417690>
+    {% if properties.available %}
+        Available rent property items
+    {% else %}
+        Unavailable rent property items
+    {% endif %}
+
+    </font></h1>
+
+    <a href="addproperty"><input type="button" value="Add new"></a>
+    <a href="getjson"><input type="button" value="JSON"></a>
+
+    {% for item in properties %}
+     <a href = "/admin/rent_app/property/{{ item.property.id }}/change">
+         {% if item.expiring %}
+         <ul>
+         {% else %}
+         <li>
+         {% endif %}
+            {{ item.property.name }}
+
+            <p>Address: {{item.property.address}}</p>
+            </font>
+
+            {% if item.overpayment %}
+                <p>Contract overpayment: {{item.overpayment}}</p>
+            {% else %}
+                <p>Contract underpayment: {{item.underpayment}}</p>
+            {% endif %}
+         </li>
+        </ul>
+    {% endfor %}
+     </a>
+
+
+{% else %}
+<p><font color="#417690">There is no property items in this category</font></p>
+{% endif %}
+
+{% endblock %}

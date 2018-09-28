@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style>
+    a:link {
+    color: none;
+    background-color: none;
+    text-decoration: none;
+    }
+
+    a:visited {
+    color: none;
+    background-color: none;
+    text-decoration: none;
+    }
+
+    a:hover {
+    color: none;
+    background-color: none;
+    text-decoration: none;
+    }
+
+    a:active {
+    color: none;
+    background-color: none;
+    text-decoration: none;
+    }
+
+
+
+    html *
+    {
+    font-family: Arial !important;
+    font-color: white;
+    }
+
+    li
+    {
+    background-color: #f1f1f1;
+    padding: 0.01em 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+
+    list-style-type: none;
+    color: blue; !important;
+    }
+
+
+    ul
+    {
+    background-color: #ffffe6;
+    padding: 0.01em 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+
+    list-style-type: none;
+    }
+
+
+    input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    }
+
+    input[type=text]:focus {
+        width: 100%;
+    }
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #417690;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body class="body">
+<h1><font color='#417690'>RENT SITE</font></h1>
+<a href="available"><input type="button" value="Available" href class="btn btn-primary"></a>
+<a href="unavailable"><input type="submit" value="Unavailable" class="btn btn-primary"></a>
+<a href = "addperson"><input type="button" value="Add person" class="btn btn-primary"></a>
+<a href="addproperty"><input type="button" value="Add property" class="btn btn-primary"></a>
+<a href="getjson"><input type="button" value="JSON" class="btn btn-primary"></a>
+<a href="admin"><input type="submit" value="Admin" class="btn btn-primary"></a>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>
